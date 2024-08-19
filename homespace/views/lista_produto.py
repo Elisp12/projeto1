@@ -4,11 +4,11 @@ from django.shortcuts import render
 from homespace.models import Categoria, Produto
 
 @login_required
-def home(request):
+def lista_produto(request):
 
     lista_produtos = Produto.objects.all()
 
     context = {
         'lista_produtos': lista_produtos
     }
-    return render(request, 'index.html', context = context)
+    return render(request, 'produto/lista_produto.html', context = context)

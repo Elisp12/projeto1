@@ -1,1 +1,1 @@
-from .home import *
+from .lista_produto import *
