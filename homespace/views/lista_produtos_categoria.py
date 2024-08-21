@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from homespace.models import Categoria, Produto
+from homespace.models import Produto
 
 def lista_produto_categoria(request, index):
     
