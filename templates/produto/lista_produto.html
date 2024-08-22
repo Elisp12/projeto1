@@ -1,10 +1,13 @@
 {% extends 'index.html' %}
 
 {% block content %}
+
+    {% include 'partials/header.html' %}
+
     <h1>Lista Produtos</h1>
     {% for lista in lista_produtos %}
         <div>
-        <div><img class="img-card"  src="{{ lista.img.url }}" alt=""></div>
+            <div><img class="img-card"  src="{{ lista.img.url }}" alt=""></div>
             <div><a href="/infor/produto/{{lista.index}}">{{ lista.nome }}</a></div>
             <div>{{ lista.descricao }}</div>
             <div>{{ lista.quantidade }}</div>
