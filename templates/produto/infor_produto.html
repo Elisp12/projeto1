@@ -2,10 +2,10 @@
 
 {% block content %}
     <h1>Lista Produtos</h1>
-    {% for lista in lista_produtos %}
+    {% for lista in infor_produto %}
         <div>
         <div><img class="img-card"  src="{{ lista.img.url }}" alt=""></div>
-            <div><a href="/infor/produto/{{lista.index}}">{{ lista.nome }}</a></div>
+            <div>{{ lista.nome }}</div>
             <div>{{ lista.descricao }}</div>
             <div>{{ lista.quantidade }}</div>
             <div>{{ lista.categoria.nome }}</div>
