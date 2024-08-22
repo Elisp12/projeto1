@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h1>Lista Produtos</h1>
+    {% for lista in produto_usuario %}
+        <div>
+            <div><img class="img-card"  src="{{ lista.img.url }}" alt=""></div>
+            <div>{{ lista.nome }}</div>
+            <div>{{ lista.descricao }}</div>
+            <div>{{ lista.quantidade }}</div>
+            <div>{{ lista.categoria.nome }}</div>
+            <div>
+                {% if lista.ativo %}
+                    ativo
+                {% else %}
+                    inativo
+                {% endif %}
+            </div>
+            <div>{{ lista.athor }}</div>
+        </div>
+    {% endfor %}
+
+{% endblock %}
